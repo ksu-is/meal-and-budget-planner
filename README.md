@@ -11,6 +11,6 @@ A weekly meal planner and grocery budget planner.
 	- Grocery order is generated.
 	- Target budget is updated 
 
-[Flow](docs/Meal Planer Flow.mdvsdx)
+[Flow](docs/Meal Planer Flow.vsdx)
 
 ## [Project Road Map](docs/projectroadmap.md)
