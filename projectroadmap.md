@@ -51,6 +51,6 @@ Move a backlog tasks to your task list when you plan to work on it
 - [x] Add to project spreadsheet
 - [x] Setup Git-hub repo
 - [x] Add an example code to project and test it. Record finding.
-> Notes: Was able to get app running with code from inventory-managment-system folder. I followed the README provided except in the last command used pyton -m flask run
+  > Notes: Was able to get app running with code from inventory-managment-system folder. I followed the README provided except in the last command used pyton -m flask run
 - [x] Create workflow
-> [Flow](meal_pallner_flow.vsdx) added to documentation. @ahamil53 check for needed changes. Thanks!
+  > Notes: [Flow](meal_pallner_flow.vsdx) added to documentation. @ahamil53 check for needed changes. Thanks!
