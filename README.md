@@ -13,6 +13,10 @@ A weekly meal and grocery budget planner.
 	- Grocery order is generated.
 	- Target budget is updated 
 
+## Project File Links
 [Flow](/meal_planner_flow.vsdx)
+[Project Road Map](/projectroadmap.md)
 
-## [Project Road Map](/projectroadmap.md)
+## Related Exsisting Repository
+[inventory-managment-system](https://github.com/ksu-is/example-inventory-management-system)
+
