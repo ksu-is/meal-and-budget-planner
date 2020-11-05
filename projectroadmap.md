@@ -26,8 +26,8 @@
 *******************************************************************************************************************************************
 # Project Roadmap
 ## Backlog Tasks
-Move a backlog task to your task list under the sprint you plan to work on it
-- [ ] Create workflow
+Move a backlog tasks to your task list when you plan to work on it
+
 - [ ] Wireframe for WEB/GUI end user 
 - [ ] Create all .py objects
 ### Sprint 3
@@ -52,3 +52,5 @@ Move a backlog task to your task list under the sprint you plan to work on it
 - [x] Setup Git-hub repo
 - [x] Add an example code to project and test it. Record finding.
 > Notes: Was able to get app running with code from inventory-managment-system folder. I followed the README provided except in the last command used pyton -m flask run
+- [x] Create workflow
+> [Flow](meal_pallner_flow.vsdx) added to documentation. @ahamil53 check for needed changes. Thanks!
