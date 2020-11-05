@@ -2,7 +2,8 @@
 |--------|-------------|----------------|----------------|----------|
 | Add Project to Teams Form | Sprint 1 |   Kristy & Ally | <ul><li>- [ ] in progress Kristy</li><li>- [x] complete Kristy</li><li>- [ ] in progress Ally</li><li>- [x] complete Ally</li></ul>|   |
 | Create Github Repo | Sprint 1 |   Kristy  | <ul><li>- [ ] in progress </li><li>- [x] complete </li></ul>|   |
-| Add an example code to project and test it. Record finding. | Sprint 1 |   Kristy & Ally | <ul><li>- [ ] in progress Kristy</li><li>- [ ] complete Kristy</li><li>- [ ] in progress Ally</li><li>- [ ] complete Ally</li></ul>| Create workflow | General |   Kristy | <ul><li>- [ ] in progress</li><li>- [ ] complete</li></ul> |   |
+| Add an example code to project and test it. Record finding. | Sprint 1 |   Kristy & Ally | <ul><li>- [x] in progress Kristy</li><li>- [ ] complete Kristy</li><li>- [x] in progress Ally</li><li>- [ ] complete Ally</li></ul>| was able to get app running with code from inventory-managment-system folder. I followed the README provided except in the last command used `pyton -m flask run` |
+|Create workflow | General |   Kristy | <ul><li>- [ ] in progress</li><li>- [x] complete</li></ul> |   |
 | Add notes to README | Sprint 1 |   Kristy & Ally | <ul><li>- [ ] in progress Kristy</li><li>- [ ] complete Kristy</li><li>- [ ] in progress Ally</li><li>- [ ] complete Ally</li></ul> |    |
 | Committed at least 6 code changes | Sprint 2 |   Kristy & Ally | <ul><li>- [ ] in progress Kristy</li><li>- [ ] complete Kristy</li><li>- [ ] in progress Ally</li><li>- [ ] complete Ally</li></ul>| Wireframe for WEB/GUI | General |   | <ul><li>- [ ] in progress</li><li>- [ ] complete</li></ul> |     |
 | Create all .py objects | General |    | <ul><li>- [ ] in progress</li><li>- [ ] complete</li></ul> |    |
