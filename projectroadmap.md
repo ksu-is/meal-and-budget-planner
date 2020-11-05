@@ -23,3 +23,32 @@
 ```
 | Task Name | Due on |   Kristy & Ally | <ul><li>- [ ] in progress Kristy</li><li>- [ ] complete Kristy</li><li>- [ ] in progress Ally</li><li>- [ ] complete Ally</li></ul>|    |
 ```
+*******************************************************************************************************************************************
+# Project Roadmap
+## Backlog Tasks
+Move a backlog task to your task list under the sprint you plan to work on it
+- [ ] Create workflow
+- [ ] Wireframe for WEB/GUI end user 
+- [ ] Create all .py objects
+### Sprint 3
+- [ ] Create one PowerPoint slide introducing your project and upload it.
+### Due Final Presentation between last day of class and DEC 14th
+- [ ] Schedule presentaiton time on teams and record meeting
+****************************************************************
+
+## Ally's Working On 
+- [ ] Add notes to README
+- [ ] Committed at least 6 code changes of significant size (not just a spelling error fix for example). Each commit should include a comment that explains what you did. The comment must be specific (ie. not just Updated README.md but rather explain what your update was and why you did it briefly).
+
+***************************************************************
+
+## Kristy's Working On
+- [ ] Add notes to README
+- [ ] Committed at least 6 code changes of significant size (not just a spelling error fix for example). Each commit should include a comment that explains what you did. The comment must be specific (ie. not just Updated README.md but rather explain what your update was and why you did it briefly).
+
+********************************************************
+# Complete Tasks and Notes
+- [x] Add to project spreadsheet
+- [x] Setup Git-hub repo
+- [x] Add an example code to project and test it. Record finding.
+> Notes: Was able to get app running with code from inventory-managment-system folder. I followed the README provided except in the last command used pyton -m flask run
