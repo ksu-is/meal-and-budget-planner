@@ -1,7 +1,7 @@
 # Meal and Budget Planner
-A weekly meal and grocery budget planner.
+Eliminate the struggle of deciding what meals to cook on a budget. Enter your budget and the available meals to choose from will be listed, making grocery shopping a bit less stressful.
 
-## Options
+## User Options
 - User records recipies and ingredients. 
 	- These are saved for future use. 
 - User records their pantry inventory of ingredients they have on hand. 
