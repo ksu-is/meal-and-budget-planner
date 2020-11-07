@@ -10,7 +10,7 @@
   > Notes: Database for Inventory, HTML pages for flask site, py code for the app
 - [x] Create workflow
   > Notes: [Flow](meal_pallner_flow.vsdx) added to documentation. @ahamil53 check for needed changes. Thanks!
-- [ ] Create database for Inventory
+- [x] Create database for Inventory
   > Notes: Inventory Management Sys repo has a pre built sqlite db in the Inventory folder. We could modify for use. 
 - [ ] Create app python code
   > Notes: Inventory Mgt System repo has a python file called app.py that we could modify.
