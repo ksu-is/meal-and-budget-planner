@@ -19,4 +19,5 @@ Eliminate the struggle of deciding what meals to cook on a budget. Enter your bu
 
 ## Related Exsisting Repository
 [inventory-managment-system](https://github.com/ksu-is/example-inventory-management-system)
+[python-grocery-list](https://github.com/guillep/python-grocery-list)
 
