@@ -7,17 +7,16 @@
 - [x] Add an example code to project and test it. Record finding.
   > Notes: Was able to get app running with code from inventory-managment-system folder. I followed the README provided except in the last command used pyton -m flask run
 - [x] Define needed componants
-  > Notes: Database for Inventory, HTML pages for flask site, py code for the app
+  > Notes: Database for Inventory, HTML pages for flask site, py code for the app db and budget
 - [x] Create workflow
-  > Notes: [Flow](meal_planner_flow.vsdx) added to documentation. @ahamil53 check for needed changes. Thanks!
+  > Notes: [Flow](meal_pallner_flow.vsdx) added to documentation. @ahamil53 check for needed changes. Thanks!
 - [ ] Create database for Inventory- IN PROGRESS (Kristy) 
+  > Notes:Still need to figure out how to add cost on products aka ingredients and the budget info
   > Notes: Inventory Management Sys repo has a pre built sqlite db in the Inventory folder. We could modify for use. 
-  >ISSUE: I'm haveng trouble adding the new tables and seting the relations to the current tables
-  >ISSUE: The partial code I have created won't upload properly
-- [ ] Create app python code
+- [ ] Create app python code -  IN PROGRESS (Kristy db code/ Allyson budget code)
   > Notes: Inventory Mgt System repo has a python file called app.py that we could modify.
-  > Notes: Check code from D2L grade tracker for log-in info. 
-- [ ] Create HTML and CSS templates for fask pages
+  > Notes: DROP FROM PROJECT ~~Check code from D2L grade tracker for log-in info.~~ 
+- [ ] Create HTML and CSS templates for flask pages
   - - [ ] Log-in
   - - [ ] Home Screen
   - - [ ] Add Recipe 
