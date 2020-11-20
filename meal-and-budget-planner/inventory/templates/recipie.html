@@ -3,9 +3,9 @@
     <div class="container">
         <table class="table">
             <thead>
-                <th scope="col">Product ID</th>
-                <th scope="col">Product Name</th>
-                <th scope="col">Quantity</th>
+                <th scope="col">Recipie ID</th>
+                <th scope="col">Recipie Name</th>
+                <th scope="col">Ingredient</th>
             </thead>
             <tbody>
                 {% for product in products %}
@@ -66,10 +66,10 @@
                     <form action = "{{ url_for('product') }}" method = "POST">
                         <td></td>
                         <td>
-                            <input name = "prod_name" placeholder="Product Name" required autofocus>
+                            <input name = "prod_name" placeholder="Recipie Name" required autofocus>
                         </td>
                         <td>
-                            <input name = "prod_quantity" placeholder="Quantity" required>
+                            <input name = "prod_quantity" placeholder="Ingredient" required>
                         </td>
                         <td>
                             <input type= "submit" class="btn btn-info btn-group-toggle" value= "submit" /><br>
