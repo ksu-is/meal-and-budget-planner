@@ -3,11 +3,15 @@ app = Flask(__name__)
 
 #recipe list  = name, cost per serving, and ingredients
 rec1 = ["baked potato",2.50,'potato','butter','cheese','bacon']
-rec2 = ["spaghetti",2.00,'spaghetti noodles','tomato sauce','hamburger']
-rec3 = ["grilled chicken",1.50,'chicken breast','marinade']
+rec2 = ["spaghetti",4.50,'spaghetti noodles','tomato sauce','hamburger']
+rec3 = ["grilled chicken",4.00,'chicken breast','marinade','rice','vegetables']
+rec4 = ["cajun pasta",4.50,'shrimp','pasta noodles', 'vodka cream sauce']
+rec5 = ["chicken noodle soup",3.50,'chicken broth','vegetables','egg noodles']
+rec6 = ["grilled cheese and tomato soup",3.00,'bread','butter','cheese','tomato soup']
+rec7 = ["chicken parmesan",5.00,'chicken breast','parmesan cheese','pasta noodles','pesto']
 
 #list of recipe
-recipes = [rec1,rec2,rec3]
+recipes = [rec1,rec2,rec3,rec4,rec5,rec6,rec7]
 
 week = ["mon","tues","wed","thur","fri","sat","sun"]
 
