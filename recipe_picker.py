@@ -1,3 +1,6 @@
+from flask import Flask, render_template, request
+app = Flask(__name__)
+
 #recipe list  = name, cost per serving, and ingredients
 rec1 = ["baked potato",2.50,'potato','butter','cheese','bacon']
 rec2 = ["spaghetti",2.00,'spaghetti noodles','tomato sauce','hamburger']
