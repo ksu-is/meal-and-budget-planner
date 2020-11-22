@@ -1,11 +1,18 @@
 <html>
    <body>
-      
+      <!-- print a list of all items in the list-->
+      <ul>
+         {% for k, v in recipe %}
+           <li>{{ recipe.name }}</li>
+         {% endfor %}  
+         </ul>
+      </ul>
+      <!--Entry form for user input. Creates a dictionary called results. Pushes to the results html page -->
       <form action = "http://localhost:5000/result" method = "POST">
          <p>What is your weekly budget? <input type = "text" name = "user_budget" /></p>
          <p>How many people are you feeding? <input type = "text" name = "user_servings" /></p>
          <p>Monday Selection <input type = "text" name = "mon_meal" /></p>
-         <p>Maths <input type ="text" name = "Mathematics" /></p>
+         <p>Tuesday Selection <input type ="text" name = "tue_meal" /></p>
          <p><input type = "submit" value = "submit" /></p>
       </form>
    </body>
