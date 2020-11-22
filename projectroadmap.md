@@ -12,6 +12,7 @@
   > Notes: [Flow](meal_pallner_flow.vsdx) added to documentation. @ahamil53 check for needed changes. Thanks!
 - [ ] Create database for Inventory- IN PROGRESS (Kristy) 
   > Notes:Still need to figure out how to add cost on products aka ingredients and the budget info
+  > Notes: Added example code for product cost listing (Allyson)
   > Notes: Inventory Management Sys repo has a pre built sqlite db in the Inventory folder. We could modify for use. 
 - [ ] Create app python code -  IN PROGRESS (Kristy db code/ Allyson budget code)
   > Notes: Inventory Mgt System repo has a python file called app.py that we could modify.
