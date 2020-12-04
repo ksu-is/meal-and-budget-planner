@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-app = Flask(__name__)
+app = Flask(__name__,static_url_path='/static')
 
 #recipe list  = name, cost per serving, and ingredients
 rec1 = ["baked potato",2.50,'potato','butter','cheese','bacon']
@@ -65,4 +65,4 @@ def result():
       return render_template("result.html",result = result, budget=budget) 
 
 if __name__ == '__main__':
-   app.run(debug = True)
+   app.run(debug = False)
