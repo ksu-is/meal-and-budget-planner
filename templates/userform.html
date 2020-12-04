@@ -5,26 +5,51 @@
 		<style>
 			/** { border:10px solid;}*/
 			
-			body, header {
+			body, header, main {
 				font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
 			}
 			
+			html, body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+#wrapper {
+	position: relative;
+	width: 90%;
+	min-height: 400px;
+	margin: 50px auto;
+	padding: 10px;
+	color: #000000;
+	background-color: rgba(240,240,240,0.80);  /* grey with opacity #p5 {background-color:rgba;}*/
+}
+
+#full-screen-background-image {
+  z-index: -999;
+  min-height: 100%;
+  min-width: 1024px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+ opacity: 75%
+}
 			
-			body{
-				background-color: aliceblue;
-			}
 			ul {
 				list-style: none;
 			}
 			form {
 				width: 50%;
-				border: 2pt solid navy;
+				border: 2pt solid rgba(35,35,35,0.97);
 				display: inline-block;
+				padding: 10px;
 			}
 			.budget_tracker {
 				float:right;
 				margin-top: 10px; 
-				margin-right: 300px;
+				margin-right: 150px;
 				display: block;  
 				width: 250px; 
 				height: 250px; 
@@ -41,47 +66,58 @@
         align-items:center; 
     } 
 		.grocery_list {
-				float: right;
-				display: inline-block;
-				margin-top: 0px;
+				float:right;
+				margin-top: 10px; 
+				margin-right: 50px;
+				width: 250px; 
+				height: 250px; 
 				border: 2px solid navy;
 				border-radius: 10px;
 				text-align: center;
-				clear:right;
-				margin-right: 300px;
+			background-color: rgba(229,229,229,.95);
+			
 	}
+			body,.grocery_list { 
+        display: inline-block;
+        justify-content:center; 
+        align-items:center; 
+    } 
 			ul .grocery_list {
 				list-style: none
 			}
 		</style>
-   <body>
-      <header style="text-align: center; background-color: #138388; margin-left: auto; margin-right: auto; height: 150px; vertical-align: bottom; color: #EBEBEB;">
-		  <h1>Meal Planner and Budget Tracker</h1>
-	   </header>
-	   <h1>Hello!</h1>
-	   <p>Welcome to the Weekly Meal and Budget Planner.<!-- print a list of all items in the list--> 
-   <p>Eliminate the struggle of deciding what meals to cook on a budget. Enter your weekly budget and choose from the available recipes  listed. We'll create your shopping list and estimate your grocery bill, making grocery shopping a bit less stressful.
-	   <ul>
-		 <li><strong>Choose from the following recipe list:</strong></li>
-         {%for list in recipes:%}
-        <li>{{list[0]}}</li>
-         {% endfor %} 
-   </ul>
+<body>
+	
+	<img src="../static/pexels-lukas-349609.jpg" alt="food" id="full-screen-background-image">
+	<header style="text-align: center; background-color: #ADAAA5; margin-left: auto; margin-right: auto; height: 150px; vertical-align: middle; color: #EBEBEB; font-weight: bold; font-size: 4em;padding-top: 1px;">
+	  <p>Meal Planner and Budget Tracker</p>
+	</header>
+	  	<div id="wrapper">
+		<h1>Hello!</h1>
+			<div style="width: 50%">
+			<p>Welcome to the Weekly Meal and Budget Planner.</p>
+   		<p>Eliminate the struggle of deciding what meals to cook on a budget. Enter your weekly budget and choose from the available recipes  listed. We'll create your shopping list and estimate your grocery bill, making grocery shopping a bit less stressful.</p></div>
+	   	<ul><!-- print a list of all items in the list--> 
+		 	<li><strong>Choose from the following recipe list:</strong></li>
+        	 {%for list in recipes:%}
+        	<li>{{list[0]}}</li>
+         	{% endfor %} 
+   		</ul>
       
       <!--Entry form for user input. Creates a dictionary called results. Pushes to the results html page -->
-      <form action = "http://localhost:5000/result" method = "POST">
-		  <h2> Budget Planner</h2>
-         <p>What is your budget this week? <input type = "text" name = "user_budget" /></p>
-         <p>How many people are you feeding? <input type = "text" name = "user_servings" /></p>
-		  <hr>
-         <p>Monday Selection <input type = "text" name = "mon_meal" /></p>
-         <p>Tuesday Selection <input type ="text" name = "tue_meal" /></p>
-		  <p>Wednesday Selection <input type ="text" name = "wed_meal" /></p>
-		  <p>Thursday Selection <input type ="text" name = "thr_meal" /></p>
-		  <p>Friday Selection <input type ="text" name = "fri_meal" /></p>
-		  <p>Saturday Selection <input type ="text" name = "sat_meal" /></p>
-		  <p>Sunday Selection <input type ="text" name = "sun_meal" /></p>
-         <p><input type = "submit" value = "submit" /></p>
+      	<form action = "http://localhost:5000/result" method = "POST">
+			<h2> Budget Planner</h2>
+         	<p>What is your budget this week? <input type = "text" name = "user_budget" /></p>
+         	<p>How many people are you feeding? <input type = "text" name = "user_servings" /></p>
+		  	<hr>
+			 <p>Monday Selection <input type = "text" name = "mon_meal" /></p>
+			 <p>Tuesday Selection <input type ="text" name = "tue_meal" /></p>
+			  <p>Wednesday Selection <input type ="text" name = "wed_meal" /></p>
+			  <p>Thursday Selection <input type ="text" name = "thr_meal" /></p>
+			  <p>Friday Selection <input type ="text" name = "fri_meal" /></p>
+			  <p>Saturday Selection <input type ="text" name = "sat_meal" /></p>
+			  <p>Sunday Selection <input type ="text" name = "sun_meal" /></p>
+			 <p><input type = "submit" value = "submit" /></p>
       </form>
 	  <div class="budget_tracker" style="text-align: center">Place Holder for budget tracker
 	   </div>
@@ -92,6 +128,7 @@
 			 <li> 2 </li>
 		   </ul>
 	   </div>
-   </body>
+	</div>
+</body>
 	</head>
 </html>
