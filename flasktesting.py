@@ -16,8 +16,11 @@ recipes = [rec1,rec2,rec3,rec4,rec5,rec6,rec7]
 week = ["mon","tues","wed","thur","fri","sat","sun"]
 
 #user info
-#user_budget = int(input('What is you budget for the week? '))
-#user_servings = int(input('How many people are you feeding? '))
+user_budget = []#int(input('What is you budget for the week? '))
+user_servings = []#int(input('How many people are you feeding? '))
+
+#user choices
+mon_meal = ""
 
 #print all the recipe available
 print('choose from the available recipes')
@@ -54,7 +57,7 @@ grocery_list = [] #<----figure out how to remove duplicates and add multiples
 ### this is the form
 @app.route('/')
 def userform():
-   return render_template('userform.html',recipes=recipes) #tells which var to pass to html
+   return render_template('userform.html',recipes=recipes,user_budget=user_budget, user_servings=user_servings) #tells which var to pass to html
 
 ### this is the table on the next page
 @app.route('/result',methods = ['POST','GET'])
@@ -62,7 +65,7 @@ def result():
    if request.method == 'POST': #when submit button is pressed
       result = request.form
       budget = request.form['user_budget'] # gets user input and save it to py
-      return render_template("result.html",result = result, budget=budget) 
+      return render_template("result.html",result = result, user_budget=user_budget, user_servings=user_servings) 
 
 if __name__ == '__main__':
    app.run(debug = False)
