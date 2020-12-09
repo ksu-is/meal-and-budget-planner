@@ -1,5 +1,49 @@
 <!doctype html>
 <html>
+	<head>
+	<style>
+		.budget_tracker {
+				float:right;
+				margin-top: 10px; 
+				margin-right: 150px;
+				display: block;  
+				width: 250px; 
+				height: 250px; 
+				border-radius: 50%; 
+				background-image: conic-gradient( 
+					pink 70deg,  
+					lightblue 0 235deg,  
+					orange 0); 
+			}
+		
+		body,.budget_tracker { 
+        display: inline-block;
+        justify-content:center; 
+        align-items:center; 
+    } 
+		.grocery_list {
+				float:right;
+				margin-top: 10px; 
+				margin-right: 50px;
+				width: auto; 
+				height: auto; 
+				border: 2px solid navy;
+				border-radius: 10px;
+				text-align: center;
+			background-color: rgba(229,229,229,.95);
+			
+	}
+			body,.grocery_list { 
+        display: inline-block;
+        justify-content:center; 
+        align-items:center; 
+    } 
+			ul .grocery_list {
+				list-style: none
+			}
+		</style>
+	
+	
    <body>
       <table border = "1">
          {% for key, value in result.items() %}
@@ -9,5 +53,26 @@
             </tr>
          {% endfor %}
       </table>
+	   <div class="budget_tracker" style="text-align: center">Place Holder for budget tracker
+	   </div>
+	   <div class="grocery_list">
+		   <ul>
+			   <li style="list-style: none"> Grocery List</li>
+			   <hr>
+		   <!--tested {% for key, value in result.items() %}
+               <li> {{ key }}, {{ value }} </li>
+         {% endfor %}-->
+			<!-- pulls ingredient list for each rec for selections made-->
+			{% for key,value in result.items() %}
+			   {% for list in recipes %}
+			   {% if value == list[0]: %}
+			   <li>For {{value}} you will need: <br>{{list[2::]}}</li>
+			   {% else %}
+			   {% endif %}
+			   {% endfor %}
+			 {% endfor %}
+		   </ul>
+	   </div>
    </body>
+	</head>
 </html>
