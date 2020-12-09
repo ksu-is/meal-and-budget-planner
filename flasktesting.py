@@ -65,7 +65,7 @@ def result():
    if request.method == 'POST': #when submit button is pressed
       result = request.form
       budget = request.form['user_budget'] # gets user input and save it to py
-      return render_template("result.html",result = result, user_budget=user_budget, user_servings=user_servings) 
+      return render_template("result.html",result = result, user_budget=user_budget, user_servings=user_servings, recipes=recipes, meal_cost=meal_cost,total_cost=total_cost,grocery_list=grocery_list) 
 
 if __name__ == '__main__':
    app.run(debug = False)
