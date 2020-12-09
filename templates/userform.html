@@ -110,14 +110,49 @@
          	<p>What is your budget this week? <input type = "text" name = "user_budget" /></p>
          	<p>How many people are you feeding? <input type = "text" name = "user_servings" /></p>
 		  	<hr>
-			 <p>Monday Selection <input type = "text" name = "mon_meal" /></p>
-			 <p>Tuesday Selection <input type ="text" name = "tue_meal" /></p>
-			  <p>Wednesday Selection <input type ="text" name = "wed_meal" /></p>
-			  <p>Thursday Selection <input type ="text" name = "thr_meal" /></p>
-			  <p>Friday Selection <input type ="text" name = "fri_meal" /></p>
-			  <p>Saturday Selection <input type ="text" name = "sat_meal" /></p>
-			  <p>Sunday Selection <input type ="text" name = "sun_meal" /></p>
-			 <p><input type = "submit" value = "submit" /></p>
+			<p><label for = "mon_meal">Select a meal for Monday  </label>
+				<select id="mon_meal" name="mon_meal" method="GET" action="/">
+  					{% for list in recipes %}
+    				<option value="{{list[0]}}">{{list[0]}}</option>
+  					{% endfor %}
+				</select></p>
+			<p><label for = "tue_meal">Select a meal for Tuesday  </label>
+				<select id="tue_meal" name="tue_meal" method="GET" action="/">
+  					{% for list in recipes %}
+    				<option value="{{list[0]}}">{{list[0]}}</option>
+  					{% endfor %}
+				</select></p>
+			<p><label for = "wed_meal">Select a meal for Wednesday  </label>
+				<select id="wed_meal" name="wed_meal" method="GET" action="/">
+  					{% for list in recipes %}
+    				<option value="{{list[0]}}">{{list[0]}}</option>
+  					{% endfor %}
+				</select></p>
+			<p><label for = "thu_meal">Select a meal for Thursday  </label>
+				<select id="thu_meal" name="thu_meal" method="GET" action="/">
+  					{% for list in recipes %}
+    				<option value="{{list[0]}}">{{list[0]}}</option>
+  					{% endfor %}
+				</select></p>
+			<p><label for = "fri_meal">Select a meal for Friday  </label>
+				<select id="fri_meal" name="fri_meal" method="GET" action="/">
+  					{% for list in recipes %}
+    				<option value="{{list[0]}}">{{list[0]}}</option>
+  					{% endfor %}
+				</select></p>
+			<p><label for = "sat_meal">Select a meal for Saturday  </label>
+				<select id="sat_meal" name="sat_meal" method="GET" action="/">
+  					{% for list in recipes %}
+    				<option value="{{list[0]}}">{{list[0]}}</option>
+  					{% endfor %}
+				</select></p>
+			<p><label for = "sun_meal">Select a meal for Sunday  </label>
+				<select id="sun_meal" name="sun_meal" method="GET" action="/">
+  					{% for list in recipes %}
+    				<option value="{{list[0]}}">{{list[0]}}</option>
+  					{% endfor %}
+				</select></p>
+			<input type="submit">
       </form>
 	  <div class="budget_tracker" style="text-align: center">Place Holder for budget tracker
 	   </div>
