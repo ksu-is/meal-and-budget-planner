@@ -49,12 +49,21 @@
          {% for key, value in result.items() %}
             <tr>
                <th> {{ key }} </th>
-               <td> {{ value }} </td>
+				<td> {{ value }} </td>
             </tr>
          {% endfor %}
       </table>
-	   <div class="budget_tracker" style="text-align: center">Place Holder for budget tracker
+	   <div>{% for list in recipes %}
+			{% if mon_meal == list[0]: %}
+		   cost mon : {{list[1]*result.user_servings|float}}
+		   {% set mon_cost = list[1]*result.user_servings|float %}
+	   {% endif %}
+		{% endfor %}
+		  cost : {{mon_cost}}
 	   </div>
+	   <div class="budget_tracker" style="text-align: center">Place Holder for budget tracker  
+	   </div>
+   
 	   <div class="grocery_list">
 		   <ul>
 			   <li style="list-style: none"> Grocery List</li>

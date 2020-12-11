@@ -23,9 +23,9 @@ user_servings = []#int(input('How many people are you feeding? '))
 mon_meal = ""
 
 #print all the recipe available
-print('choose from the available recipes')
-for list in recipes:
-    print(list[0])
+#print('choose from the available recipes')
+#for list in recipes:
+    #print(list[0])
 
 #set up peramiters
 meal = ""
@@ -53,6 +53,16 @@ grocery_list = [] #<----figure out how to remove duplicates and add multiples
     
 #print("total cost for the week:",total_cost)
 #print("grocery list",grocery_list)
+#budget_dif = 0
+#def week_budget():
+    #if request.method == 'POST':
+        #for key,value in result.items():
+            #for list in recipes:
+                #if value == list[0]:
+                    #total_cost += list[1] * user_servings
+                    #budget_dif = user_budget - list[1] * user_servings
+                #else:
+                    #pass
 
 ### this is the form
 @app.route('/')
@@ -62,10 +72,28 @@ def userform():
 ### this is the table on the next page
 @app.route('/result',methods = ['POST','GET'])
 def result():
-   if request.method == 'POST': #when submit button is pressed
-      result = request.form
+    if request.method == 'POST': #when submit button is pressed
+      result = request.form #remove if test fails
       budget = request.form['user_budget'] # gets user input and save it to py
-      return render_template("result.html",result = result, user_budget=user_budget, user_servings=user_servings, recipes=recipes, meal_cost=meal_cost,total_cost=total_cost,grocery_list=grocery_list) 
-
+      mon_meal = request.form['mon_meal']
+      return render_template("result.html",result = result, user_budget=user_budget, user_servings=user_servings, recipes=recipes, meal_cost=meal_cost,total_cost=total_cost,grocery_list=grocery_list, mon_meal=mon_meal,) 
+                                #result.html
+#Testing for budget calcs 
+#@app.route('/result',methods = ['POST','GET'])
+#def budget_pie():
+    #if request.method == 'POST':
+        #total_cost = 0
+        #result = request.form
+        #user_budget = request.form['user_budget']
+        #user_servings = request.form['user_servings']
+        #budget_dif = 0
+        #for key,value in result.items():
+           #for list in recipes:
+                #if value == list[0]:
+                    #total_cost += list[1] * user_servings
+                    #budget_dif = user_budget - list[1] * user_servings
+                #else:
+                    #pass
+    #return str(week_budget(int(result.user_budget)))
 if __name__ == '__main__':
-   app.run(debug = False)
+   app.run(debug = True)
