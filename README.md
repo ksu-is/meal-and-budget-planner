@@ -9,7 +9,7 @@ Eliminate the struggle of deciding what meals to cook on a budget. Enter your bu
 - The budget is compared to the estimated cost per serving of the recipes selected and generates a budget graph.
 
 ## To Run The App
-- Open meal_app.py [meal_app.py](/meal_app.py)
+- Open app.py [app.py](/app.py)
 - Install flask if needed
 - Run flask
 - Open with the http port 5000 link
