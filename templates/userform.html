@@ -1,168 +1,153 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Meal Planner</title>
-		<style>
-			/** { border:10px solid;}*/
-			
-			body, header, main {
-				font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
-			}
-			
-			html, body {
-  height: 100%;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-}
-#wrapper {
-	position: relative;
-	width: 90%;
-	min-height: 400px;
-	margin: 50px auto;
-	padding: 10px;
-	color: #000000;
-	background-color: rgba(240,240,240,0.80);  /* grey with opacity #p5 {background-color:rgba;}*/
-}
-
-#full-screen-background-image {
-  z-index: -999;
-  min-height: 100%;
-  min-width: 1024px;
-  width: 100%;
-  height: auto;
-  position: fixed;
-  top: 0;
-  left: 0;
- opacity: 75%
-}
-			
-			ul {
-				list-style: none;
-			}
-			form {
-				width: 50%;
-				border: 2pt solid rgba(35,35,35,0.97);
-				display: inline-block;
-				padding: 10px;
-			}
-			.budget_tracker {
-				float:right;
-				margin-top: 10px; 
-				margin-right: 150px;
-				display: block;  
-				width: 250px; 
-				height: 250px; 
-				border-radius: 50%; 
-				background-image: conic-gradient( 
-					pink 70deg,  
-					lightblue 0 235deg,  
-					orange 0); 
-			}
 		
-		body,.budget_tracker { 
-        display: inline-block;
-        justify-content:center; 
-        align-items:center; 
-    } 
-		.grocery_list {
+<title>Meal Planner</title>
+		
+<style>
+	/** { border:10px solid;}*/
+			
+	body, header, main {
+		font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+	}
+			
+	html, body {
+	  height: 100%;
+	  width: 100%;
+	  padding: 0;
+	  margin: 0;
+	}
+	#wrapper {
+		position: relative;
+		width: 90%;
+		min-height: 400px;
+		margin: 50px auto;
+		padding: 10px;
+		color: #000000;
+		background-color: rgba(240,240,240,0.80);  /* grey with opacity #p5 {background-color:rgba;}*/
+	}
+
+	#full-screen-background-image {
+	  z-index: -999;
+	  min-height: 100%;
+	  min-width: 1024px;
+	  width: 100%;
+	  height: auto;
+	  position: fixed;
+	  top: 0;
+	  left: 0;
+	 opacity: 75%
+	}
+			
+	ul {
+		list-style: none;
+	}
+	form {
+		width: 50%;
+		border: 2pt solid rgba(35,35,35,0.97);
+		display: inline-block;
+		padding: 10px;
+		
+	}
+	.grocery_list {
 				float:right;
 				margin-top: 10px; 
-				margin-right: 50px;
+				margin-right: 300px;
+				margin-left: 25px;
 				width: auto; 
 				height: auto; 
 				border: 2px solid navy;
 				border-radius: 10px;
 				text-align: center;
-			background-color: rgba(229,229,229,.95);
-	}
+				background-color: rgba(229,229,229,.95);
+				padding: 4px;
+			}
+			
 			body,.grocery_list { 
-        display: inline-block;
-        justify-content:center; 
-        align-items:center; 
-    } 
+				display: inline-block;
+				justify-content:center; 
+				align-items:center; 
+			} 
+		
 			ul .grocery_list {
 				list-style: none
 			}
-		</style>
+</style>
+
 <body>
-	
 	<img src="../static/pexels-lukas-349609.jpg" alt="food" id="full-screen-background-image">
-	<header style="text-align: center; background-color: #ADAAA5; margin-left: auto; margin-right: auto; height: 150px; vertical-align: middle; color: #EBEBEB; font-weight: bold; font-size: 4em;padding-top: 1px;">
+
+<header style="text-align: center; background-color: #ADAAA5; margin-left: auto; margin-right: auto; height: 150px; vertical-align: middle; color: #EBEBEB; font-weight: bold; font-size: 4em;padding-top: 1px;">
 	  <p>Meal Planner and Budget Tracker</p>
-	</header>
-	  	<div id="wrapper">
-		<h1>Hello!</h1>
-			<div style="width: 50%">
-			<p>Welcome to the Weekly Meal and Budget Planner.</p>
-   		<p>Eliminate the struggle of deciding what meals to cook on a budget. Enter your weekly budget and choose from the available recipes  listed. We'll create your shopping list and estimate your grocery bill, making grocery shopping a bit less stressful.</p></div>
-	   	<ul><!-- print a list of all items in the list--> 
-		 	<li><strong>Choose from the following recipe list:</strong></li>
-        	 {%for list in recipes:%}
-        	<li>{{list[0]}}</li>
-         	{% endfor %} 
-   		</ul>
-      
+</header>
+	
+<div id="wrapper">
+	<h1>Hello!</h1>
+<div style="width: 50%">
+	<p>Welcome to the Weekly Meal and Budget Planner.</p>
+	<p>Eliminate the struggle of deciding what meals to cook on a budget. Enter your weekly budget and choose from the available recipes  listed. We'll create your shopping list and estimate your grocery bill, making grocery shopping a bit less stressful.</p></div>
+   
       <!--Entry form for user input. Creates a dictionary called results. Pushes to the results html page -->
-      	<form action = "http://localhost:5000/result" method = "POST">
-			<h2> Budget Planner</h2>
-         	<p>What is your budget this week? <input type = "text" name = "user_budget" /></p>
-         	<p>How many people are you feeding? <input type = "text" name = "user_servings" /></p>
-		  	<hr>
-			<p><label for = "mon_meal">Select a meal for Monday  </label>
-				<select id="mon_meal" name="mon_meal" method="GET" action="/">
-  					{% for list in recipes %}
-    				<option value="{{list[0]}}">{{list[0]}}</option>
-  					{% endfor %}
-				</select></p>
-			<p><label for = "tue_meal">Select a meal for Tuesday  </label>
-				<select id="tue_meal" name="tue_meal" method="GET" action="/">
-  					{% for list in recipes %}
-    				<option value="{{list[0]}}">{{list[0]}}</option>
-  					{% endfor %}
-				</select></p>
-			<p><label for = "wed_meal">Select a meal for Wednesday  </label>
-				<select id="wed_meal" name="wed_meal" method="GET" action="/">
-  					{% for list in recipes %}
-    				<option value="{{list[0]}}">{{list[0]}}</option>
-  					{% endfor %}
-				</select></p>
-			<p><label for = "thu_meal">Select a meal for Thursday  </label>
-				<select id="thu_meal" name="thu_meal" method="GET" action="/">
-  					{% for list in recipes %}
-    				<option value="{{list[0]}}">{{list[0]}}</option>
-  					{% endfor %}
-				</select></p>
-			<p><label for = "fri_meal">Select a meal for Friday  </label>
-				<select id="fri_meal" name="fri_meal" method="GET" action="/">
-  					{% for list in recipes %}
-    				<option value="{{list[0]}}">{{list[0]}}</option>
-  					{% endfor %}
-				</select></p>
-			<p><label for = "sat_meal">Select a meal for Saturday  </label>
-				<select id="sat_meal" name="sat_meal" method="GET" action="/">
-  					{% for list in recipes %}
-    				<option value="{{list[0]}}">{{list[0]}}</option>
-  					{% endfor %}
-				</select></p>
-			<p><label for = "sun_meal">Select a meal for Sunday  </label>
-				<select id="sun_meal" name="sun_meal" method="GET" action="/">
-  					{% for list in recipes %}
-    				<option value="{{list[0]}}">{{list[0]}}</option>
-  					{% endfor %}
-				</select></p>
-			<input type="submit">
-      </form>
-	  <div class="budget_tracker" style="text-align: center">Place Holder for budget tracker
-	   </div>
-	   <div class="grocery_list">
-		   <ul>
-			   <li style="list-style: none"> Grocery List</li>
-			   <hr>
-		   </ul>
-	   </div>
-		
-	</div>
+	<form action = "http://localhost:5000/result" method = "POST">
+		<h2> Weekly Planner</h2>
+		<p>What is your budget this week? <input type = "text" name = "user_budget" /></p>
+		<p>How many people are you feeding? <input type = "text" name = "user_servings" /></p>
+		<hr>
+		<p><label for = "mon_meal">Select a meal for Monday  </label>
+			<select id="mon_meal" name="mon_meal" method="GET" action="/">
+				{% for list in recipes %}
+				<option value="{{list[0]}}">{{list[0]}}</option>
+				{% endfor %}
+			</select></p>
+		<p><label for = "tue_meal">Select a meal for Tuesday  </label>
+			<select id="tue_meal" name="tue_meal" method="GET" action="/">
+				{% for list in recipes %}
+				<option value="{{list[0]}}">{{list[0]}}</option>
+				{% endfor %}
+			</select></p>
+		<p><label for = "wed_meal">Select a meal for Wednesday  </label>
+			<select id="wed_meal" name="wed_meal" method="GET" action="/">
+				{% for list in recipes %}
+				<option value="{{list[0]}}">{{list[0]}}</option>
+				{% endfor %}
+			</select></p>
+		<p><label for = "thu_meal">Select a meal for Thursday  </label>
+			<select id="thu_meal" name="thu_meal" method="GET" action="/">
+				{% for list in recipes %}
+				<option value="{{list[0]}}">{{list[0]}}</option>
+				{% endfor %}
+			</select></p>
+		<p><label for = "fri_meal">Select a meal for Friday  </label>
+			<select id="fri_meal" name="fri_meal" method="GET" action="/">
+				{% for list in recipes %}
+				<option value="{{list[0]}}">{{list[0]}}</option>
+				{% endfor %}
+			</select></p>
+		<p><label for = "sat_meal">Select a meal for Saturday  </label>
+			<select id="sat_meal" name="sat_meal" method="GET" action="/">
+				{% for list in recipes %}
+				<option value="{{list[0]}}">{{list[0]}}</option>
+				{% endfor %}
+			</select></p>
+		<p><label for = "sun_meal">Select a meal for Sunday  </label>
+			<select id="sun_meal" name="sun_meal" method="GET" action="/">
+				{% for list in recipes %}
+				<option value="{{list[0]}}">{{list[0]}}</option>
+				{% endfor %}
+			</select></p>
+		<input type="submit">
+  </form>
+	
+	<div class="grocery_list">
+		<ul><!-- print a list of all items in the list--> 
+			<li><strong>Choose from the following recipe list:</strong></li>
+			 {%for list in recipes:%}
+				<li>{{list[0]}}</li>
+			 {% endfor %} 
+		</ul>
+	</div>   		
+
+</div>
 </body>
-	</head>
+</head>
 </html>
