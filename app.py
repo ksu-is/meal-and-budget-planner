@@ -2,16 +2,19 @@ from flask import Flask, render_template, request
 app = Flask(__name__,static_url_path='/static')
 
 #recipe list  = name, cost per serving, and ingredients
-rec1 = ["baked potato",2.50,'potato','butter','cheese','bacon']
-rec2 = ["spaghetti",4.50,'spaghetti noodles','tomato sauce','hamburger']
-rec3 = ["grilled chicken",4.00,'chicken breast','marinade','rice','vegetables']
-rec4 = ["cajun pasta",4.50,'shrimp','pasta noodles', 'vodka cream sauce']
-rec5 = ["chicken noodle soup",3.50,'chicken broth','vegetables','egg noodles']
-rec6 = ["grilled cheese and tomato soup",3.00,'bread','butter','cheese','tomato soup']
-rec7 = ["chicken parmesan",5.00,'chicken breast','parmesan cheese','pasta noodles','pesto']
+rec1 = ["Baked Potato",2.50,'potato','butter','cheese','bacon']
+rec2 = ["Spaghetti",4.50,'spaghetti noodles','tomato sauce','hamburger']
+rec3 = ["Grilled Chicken",4.00,'chicken breast','marinade','rice','vegetables']
+rec4 = ["Cajun Pasta",4.50,'shrimp','pasta noodles', 'vodka cream sauce']
+rec5 = ["Chicken Noodle Soup",3.50,'chicken broth','vegetables','egg noodles']
+rec6 = ["Grilled Cheese and Tomato Soup",3.00,'bread','butter','cheese','tomato soup']
+rec7 = ["Chicken Parmesan",5.00,'chicken breast','parmesan cheese','pasta noodles','pesto']
+rec8 = ["Fettuccine Alfredo",4.00,'fettuccine noodles','parmesan cheese','butter','heavy cream']
+rec9 = ["Salmon Skillet",6.00,'salmon filet', 'cherry tomatos', 'sugar snap peas','lime', 'olive oil']
+rec10 = ["Hamburger Macaroni",3.00,'ground beef','macaroni','onion','tomato','chili pepper flakes']
 
 #list of recipe
-recipes = [rec1,rec2,rec3,rec4,rec5,rec6,rec7]
+recipes = [rec1,rec2,rec3,rec4,rec5,rec6,rec7,rec8,rec9,rec10]
 
 
 #user info
