@@ -13,6 +13,13 @@ Eliminate the struggle of deciding what meals to cook on a budget. Enter your bu
 - Install flask if needed
 - Run flask
 - Open with the http port 5000 link
+
+## To Run The App - from GitHub Desktop 
+- Fetch the current repository 'meal-and-budget-plannet and open in Visual Studio Code (confirm time of last fetch for any recent changes in code)
+- Select app.py and right click - Run Python in Terminal
+- Reference user port 5000 - http://127.0.0.1:5000/
+- For Mac (cmd + click) 
+
 - fill out the form and submit
 - Use the browsers back button to go back to the form
 
