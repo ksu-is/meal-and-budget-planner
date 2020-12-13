@@ -107,10 +107,10 @@ def budget_pie():
             else:
                 pass
 
-            if total_cost > int(user_budget): #if the the total cost is higher than the budget
-                msg = "Selections are over budget by $"+ str(total_cost-int(user_budget)) + '0 !'
+            if total_cost > float(user_budget): #if the the total cost is higher than the budget
+                msg = "Selections are over budget by $"+ str(total_cost-float(user_budget)) + '0 !'
             else:
-                msg = " You are under budget by $" + str(int(user_budget) - total_cost) +'0 !'
+                msg = " You are under budget by $" + str(float(user_budget) - total_cost) +'0 !'
 
         total_deg = total_cost*(360/float(user_budget)) #this feeds the budget pie chart. Figures how many dollars for each degree of the chart so that 100% budget is 100% of chart area. 
     return render_template("result.html", mon_bud=mon_bud, tue_bud=tue_bud,wed_bud=wed_bud, 
